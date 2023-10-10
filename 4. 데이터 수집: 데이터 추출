@@ -28,4 +28,17 @@ $ ./Scrpits/Activate.ps1
 - Microsoft Azure의 Storage와 GCP의 Google Cloud Storage도 유사한 서비스 제공
 - S3 : 파일을 저장하고 액세스할 수 있는 간단한 방법
 
+# boto3 패키지 설치 
+# boto3 : 파이썬용 AWS SDK
+(env) $ pip install boto3
+
+- S3를 사용하기 위해서 IAM계정이 필요합니다. 
+- 앞서 생성한 pipeline.conf 파일에 IAM 사용자 및 S3 버킷 정보를 저장할 섹션을 추가합니다. 
+
+[aws_boto_credentials]
+access_key = AKIAT5HBQVVNENRTYLQA
+secret_key = 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
+bucket_name = park-temp
+account_id = 268908408154
+
 
