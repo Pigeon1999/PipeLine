@@ -41,4 +41,5 @@ secret_key = hovEffWDGT+hPemxBDG2d4Yw6q4omSkE5s+7huCg
 bucket_name = park-temp
 account_id = 268908408154
 
+3. MySQL 데이터베이스에서 데이터 추출
 
