@@ -1,6 +1,6 @@
 * 모든 코드 예제는 파이썬과 SQL로 작성되며 오픈 소스 프레임워크를 사용합니다. 
 
-파이썬 환경 설정 
+1. 파이썬 환경 설정 
 - 예제를 실행하기 위해서는 물리적, 가상 시스템이 필요합니다. 
 - 우선 라이브러리를 설치하기 전에 가상환경을 만드는 것이 가장 좋다. 
 
@@ -19,5 +19,13 @@ $ ./Scrpits/Activate.ps1
 
 # pipeline.conf 파일을 생성
 # 파이썬 스크립트와 동일한 디렉터리에 pipeline.conf 파일을 생성합니다. 
+# touch : 빈 파일을 생성하는 명령어 
 <리눅스> (env) $ touch pipeline.conf
 <윈도우> (env) $ echo $null >> pipeline.conf
+
+2. 클라우드 파일 스토리지 설정 
+- 파일 저장에는 AWS S3 버킷을 사용합니다. 
+- Microsoft Azure의 Storage와 GCP의 Google Cloud Storage도 유사한 서비스 제공
+- S3 : 파일을 저장하고 액세스할 수 있는 간단한 방법
+
+
