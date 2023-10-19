@@ -1,6 +1,6 @@
 * 모든 코드 예제는 파이썬과 SQL로 작성되며 오픈 소스 프레임워크를 사용합니다. 
 
-[MySQL로 데이터 추출]
+[기본 설정]
 
 1. 파이썬 환경 설정 
 - 예제를 실행하기 위해서는 물리적, 가상 시스템이 필요합니다. 
@@ -19,6 +19,7 @@ $ & ./Scripts/Activate.ps1
 
 # pipeline.conf 파일을 생성
 # 파이썬 스크립트와 동일한 디렉터리에 pipeline.conf 파일을 생성합니다. 
+# pipeline.conf : SQL툴이나 S3, 웨어하우스 툴 등, 매개변수, 기본설정, 대체옵션 지정
 # touch : 빈 파일을 생성하는 명령어 
 <리눅스> (env) $ touch pipeline.conf
 <윈도우> (env) $ echo $null >> pipeline.conf
@@ -40,6 +41,42 @@ access_key = AKIAT5HBQVVNENRTYLQA
 secret_key = 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
 bucket_name = park-temp
 account_id = 268908408154
+
+[여러 환경에서의 사용법]
+여러 환경에서 추출할 경우가 생기는데 아래의 경우가 흔하다. 
+ - MySQL 데이터베이스에서 데이터 추출 : SQL을 이용한 전체/증분 추출 또는 이진 로그 복제, 두 가지 방법으로 추출 가능하다. 
+        - 전체/증분 추출 : 구현하기 쉽지만, 변경하기 어려워 확장성이 떨어진다. 
+        - 이진 로그 복제 : 구현하기 복잡하지만, 데이터를 자주 수집하는 경우 적합하다. 
+ - PosrgreSQL 데이터베이스에서 데이터 추출 
+        - Postgres WAL : 스트리밍 데이터로 변환
+ - MongoDB 데이터베이스에서 데이터 추출 
+ - REST API에서 데이터 추출 : SNS 같은 외부 서비스/공급업체의 API에서 데이터를 수집해야 할수도 있다.  
+ - 카프카 및 Debezium을 통한 스트리밍 데이터 수집 : MySQL 이진 로그 또는 Postgres WALs와 같은 CDC 시스템을 통해 데이터를 수집할 경우 필요하다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 3. MySQL 데이터베이스에서 데이터 추출
 
